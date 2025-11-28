@@ -1,10 +1,10 @@
-class Phone{
+class Phone {
     code;
     name;
     brand;
     cost;
 
-    constructor(code = "", name = "", brand = "", cost = 0){
+    constructor(code = "", name = "", brand = "", cost = 0) {
         this._code = code;
         this._name = name;
         this._brand = brand;
@@ -43,19 +43,19 @@ class Phone{
         this._cost = value;
     }
 
-    toString(){
+    toString() {
         return `${this._code} ${this._name} ${this._brand} ${this._cost}`;
     }
 }
 
 let phoneList = [
-    new Phone ("P1", "Samsung A50", "Samsung", 10000000),
-    new Phone ("P2", "iPhone 11", "Apple", 15000000),
-    new Phone ("P3", "Huawei P30", "Huawei", 12000000),
-    new Phone ("P4", "Xiaomi Mi 10", "Xiaomi", 13000000)
+    new Phone("P1", "Samsung A50", "Samsung", 10000000),
+    new Phone("P2", "iPhone 11", "Apple", 15000000),
+    new Phone("P3", "Huawei P30", "Huawei", 12000000),
+    new Phone("P4", "Xiaomi Mi 10", "Xiaomi", 13000000)
 ];
 
-function addPhone(){
+function addPhone() {
     let newPhone = new Phone();
     newPhone.code = prompt("Nhap ma so: ") || "";
     newPhone.name = prompt("Nhap ten: ") || "";
@@ -64,7 +64,7 @@ function addPhone(){
     phoneList.push(newPhone);
 }
 
-function printPhoneList(list){
+function printPhoneList(list) {
     list.sort((a, b) => {
         let nameA = (a.name || "").toLowerCase();
         let nameB = (b.name || "").toLowerCase();
