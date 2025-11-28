@@ -1,9 +1,4 @@
 class Phone {
-    code;
-    name;
-    brand;
-    cost;
-
     constructor(code = "", name = "", brand = "", cost = 0) {
         this._code = code;
         this._name = name;
